@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Quieres estar conmigo?</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin-top: 100px;
+        }
+        button {
+            font-size: 20px;
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>¿Quieres estar conmigo?</h1>
+    <button onclick="respuestaSi()">Sí</button>
+    <button id="noBtn" onmouseover="moverNo()">No</button>
+
+    <script>
+        function respuestaSi() {
+            alert("¡Sabía que dirías que sí! ❤️");
+        }
+
+        function moverNo() {
+            let btn = document.getElementById("noBtn");
+            let x = Math.random() * (window.innerWidth - btn.clientWidth);
+            let y = Math.random() * (window.innerHeight - btn.clientHeight);
+            btn.style.position = "absolute";
+            btn.style.left = x + "px";
+            btn.style.top = y + "px";
+        }
+    </script>
+
+</body>
+</html>
